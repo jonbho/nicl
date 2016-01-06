@@ -38,7 +38,7 @@ var inputListenerFiber = null;
 /* This function sets up input processing such that whatever is received via stdin
  * is stored in the inputBuffer, and if the main "nicl'd" code fiber is suspended
  * waitin for input, it will be woken up to resume its process */
-function ensure_initial_setup() {
+function ensureInitialSetup() {
     if (!initialized) {
         initialized = true;
         process.stdin.resume();
@@ -61,7 +61,7 @@ function ensure_initial_setup() {
  * back up when input arrives, and continue running the main "nicl'd" code. */
 function readLine() {
     // Ensure asynchronous operation is set up
-    ensure_initial_setup();
+    ensureInitialSetup();
 
     // Set up listener for when input arrives (it just continues on the next step)
     var fiber = Fiber.current;
@@ -70,8 +70,7 @@ function readLine() {
     });
 
     // If there isn't any, terminate this fiber until there is
-    if (inputBuffer === "")
-    {
+    if (inputBuffer === "") {
         // Register a listener to continue the work
         Fiber.yield();
     }
