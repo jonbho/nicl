@@ -25,7 +25,7 @@ de-facto standard for non-browser JavaScript is Node.js, allows command-line ope
 as an event-driven framework that doesn't in principle allow you to write sequential code interacting with the
 users. **Nicl** adds support for sequential interactive code running inside Node.js.
 
-Many IDEs only understad "browser JavaScript" and "Node.js JavaScript". If you want to benefit from
+Many IDEs only understand "browser JavaScript" and "Node.js JavaScript". If you want to benefit from
 their advantages foro your JavaScript project (autocompletion, debugging, etc...), your project had
 better be one of those two. 
 
