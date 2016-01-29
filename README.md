@@ -26,7 +26,7 @@ as an event-driven framework that doesn't in principle allow you to write sequen
 users. **Nicl** adds support for sequential interactive code running inside Node.js.
 
 Many IDEs only understand "browser JavaScript" and "Node.js JavaScript". If you want to benefit from
-their advantages foro your JavaScript project (autocompletion, debugging, etc...), your project had
+their advantages for your JavaScript project (autocompletion, debugging, etc...), your project had
 better be one of those two. 
 
 The main initial goal is educational. Using **nicl** and a free IDE like NetBeans, a beginner can start writing
