@@ -64,10 +64,7 @@ function readLine() {
     ensureInitialSetup();
 
     // Set up listener for when input arrives (it just continues on the next step)
-    var fiber = Fiber.current;
-    inputListenerFiber = Fiber(function () {
-        fiber.run();
-    });
+    inputListenerFiber = Fiber.current;
 
     // If there isn't any, terminate this fiber until there is
     if (inputBuffer === "") {
